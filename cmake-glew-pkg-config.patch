@@ -1,0 +1,13 @@
+diff --git a/src/SiftGPU/CMakeLists.txt b/src/SiftGPU/CMakeLists.txt
+index aaa0d11..d5779ef 100644
+--- a/src/SiftGPU/CMakeLists.txt
++++ b/src/SiftGPU/CMakeLists.txt
+@@ -1,6 +1,7 @@
+ find_package(OpenGL REQUIRED)
+ find_package(GLUT REQUIRED)
+-find_package(Glew)
++find_package(PkgConfig REQUIRED)
++pkg_check_modules(GLEW REQUIRED glew)
+ 
+ SET(SIFTGPU_ENABLE_SERVER FALSE)
+ SET(SIFTGPU_ENABLE_OPENCL FALSE)
